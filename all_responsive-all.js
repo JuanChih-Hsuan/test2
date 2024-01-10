@@ -1,3 +1,13 @@
+window.onerror = function(messsage, url, line, colno, error){
+//alert("1:" + messsage + "/" + url + "/" + line+ "/" + colno+ "/" + error)
+return true
+}
+
+window.addEventListener("unhandledrejection", function (event) {
+alert("2:" + event.reason)
+event.preventDefault();
+});
+
 !function(e, t) {
     "use strict";
     "object" == typeof module && "object" == typeof module.exports ? module.exports = e.document ? t(e, !0) : function(e) {
